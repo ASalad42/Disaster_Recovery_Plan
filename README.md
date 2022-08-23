@@ -41,6 +41,19 @@ AWS S3 Acivity:
 
 ![image](https://user-images.githubusercontent.com/104793540/186192478-5ce4a26e-b365-4e13-8b37-3c1fdd95a839.png)
 
+- Before using Boto3, you need to set up authentication credentials for your AWS account using either the IAM Console or the AWS CLI. 
+- sudo pip3 install awscli
+- aws configure
+
+Using Boto3:
+To use Boto3, you must first import it and indicate which service or services you're going to use:
+
+```
+import boto3
+# Let's use Amazon S3
+s3 = boto3.resource('s3')
+```
+
 - python3 script.py #running python script in ubuntu
 
 
