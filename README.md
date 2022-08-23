@@ -51,7 +51,7 @@ creating python file:
 Using Boto3:
 To use Boto3, you must first import it and indicate which service or services you're going to use:
 
-```
+
 #### Client Versus Resource
 At its core, all that Boto3 does is call AWS APIs on your behalf. For the majority of the AWS services, Boto3 offers two distinct ways of accessing these abstracted APIs:
 
@@ -60,6 +60,7 @@ At its core, all that Boto3 does is call AWS APIs on your behalf. For the majori
 You can use either to interact with S3.
 
 To connect to the low-level client interface, you must use Boto3’s client(). You then pass in the name of the service you want to connect to, in this case, s3:
+
 ```
 import boto3
 s3_client = boto3.client('s3')
