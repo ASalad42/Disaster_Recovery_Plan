@@ -45,6 +45,9 @@ AWS S3 Acivity:
 - sudo pip3 install awscli
 - aws configure
 
+creating python file:
+- sudo nano aws_s3.py
+
 Using Boto3:
 To use Boto3, you must first import it and indicate which service or services you're going to use:
 
