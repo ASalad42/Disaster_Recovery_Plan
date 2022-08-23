@@ -111,5 +111,7 @@ s3.upload_file(
 ```
 - Type python SCRIPTNAME.py in the terminal to execute the script
 
-
+debugging:
+ModuleNotFoundError: No module named 'boto3'
+- pip install pandas
 
