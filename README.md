@@ -29,18 +29,18 @@ sudo rm test.txt
 AWS S3 Acivity:
 - 10-15 lines of code max
 
-```
-sudo apt-get install python3.7
-alias python=python3.7
-curl -O https://bootstrap.pypa.io/get-pip.py # might not need
-sudo apt install python-pip
+
+- sudo apt-get install python3.7
+- alias python=python3.7
+- curl -O https://bootstrap.pypa.io/get-pip.py # might not need
+- sudo apt install python-pip
 
 ![image](https://user-images.githubusercontent.com/104793540/186192657-de343c06-72dc-4a53-a743-b3eea098f520.png)
 
-pip install boto3
+- pip install boto3
 
 ![image](https://user-images.githubusercontent.com/104793540/186192478-5ce4a26e-b365-4e13-8b37-3c1fdd95a839.png)
 
-python3 script.py #running python script in ubuntu
+- python3 script.py #running python script in ubuntu
 
-```
+
