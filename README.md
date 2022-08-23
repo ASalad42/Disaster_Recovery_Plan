@@ -75,7 +75,7 @@ import boto3
 s3 = boto3.resource('s3')
 ```
 
-```
+
 Better way to get the region programatically is by taking advantage of a session object:
 - The nice part is that this code works no matter where you want to deploy it: locally/EC2/Lambda. Moreover, you don’t need to hardcode your region.
 
