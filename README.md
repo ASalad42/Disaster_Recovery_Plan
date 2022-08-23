@@ -93,6 +93,23 @@ def create_bucket(bucket_prefix, s3_connection):
     return bucket_name, bucket_response
 ```
 
-- python3 script.py #running python script in ubuntu
+![image](https://user-images.githubusercontent.com/104793540/186215017-4ab0bae3-b81a-42ea-a364-0dcaaf4f0690.png)
+
+```python
+import boto3
+s3 = boto3.client('s3')
+
+
+s3.create_bucket(Bucket='eng122-ayanle-boto3-bucket', CreateBucketConfiguration={'LocationConstraint':'eu-west-1'})
+
+
+
+s3.upload_file(
+        'test.txt','eng122-ayanle-boto3-bucket','pythonfile-test.txt')
+
+
+```
+- Type python SCRIPTNAME.py in the terminal to execute the script
+
 
 
