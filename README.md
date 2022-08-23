@@ -52,9 +52,44 @@ Using Boto3:
 To use Boto3, you must first import it and indicate which service or services you're going to use:
 
 ```
+#### Client Versus Resource
+At its core, all that Boto3 does is call AWS APIs on your behalf. For the majority of the AWS services, Boto3 offers two distinct ways of accessing these abstracted APIs:
+
+- Client: low-level service access
+- Resource: higher-level object-oriented service access
+You can use either to interact with S3.
+
+To connect to the low-level client interface, you must use Boto3’s client(). You then pass in the name of the service you want to connect to, in this case, s3:
+```
+import boto3
+s3_client = boto3.client('s3')
+```
+
+To connect to the high-level interface, you’ll follow a similar approach, but use resource():
+```
+import boto3
+s3_resource = boto3.resource('s3')
 import boto3
 # Let's use Amazon S3
 s3 = boto3.resource('s3')
+```
+
+```
+Better way to get the region programatically is by taking advantage of a session object:
+- The nice part is that this code works no matter where you want to deploy it: locally/EC2/Lambda. Moreover, you don’t need to hardcode your region.
+
+```
+#creating a bucket with region  using session object
+def create_bucket(bucket_prefix, s3_connection):
+    session = boto3.session.Session()
+    current_region = session.region_name
+    bucket_name = create_bucket_name(bucket_prefix)
+    bucket_response = s3_connection.create_bucket(
+        Bucket=bucket_name,
+        CreateBucketConfiguration={
+        'LocationConstraint': current_region})
+    print(bucket_name, current_region)
+    return bucket_name, bucket_response
 ```
 
 - python3 script.py #running python script in ubuntu
