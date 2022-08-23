@@ -7,7 +7,6 @@
 - disaster recovery plan 
 - how we set up access and keys
 
-10-15 lines of code max
 
 ```
 Update
@@ -25,4 +24,15 @@ sudo rm test.txt
 aws s3 cp s3://eng122-ayanle-bucket/test.txt /home/ubuntu
 output: download: s3://eng122-ayanle-bucket/test.txt to ./test.txt
 sudo rm test.txt
+```
+
+AWS S3 Acivity:
+- 10-15 lines of code max
+
+```
+sudo apt-get install python3.7
+alias python=python3.7
+curl -O https://bootstrap.pypa.io/get-pip.py
+
+
 ```
