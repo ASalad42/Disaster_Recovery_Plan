@@ -115,3 +115,20 @@ debugging:
 ModuleNotFoundError: No module named 'boto3'
 - pip install pandas
 
+Traversals
+If you need to retrieve information from or apply an operation to all your S3 resources, Boto3 gives you several ways to iteratively traverse your buckets and your objects.
+- bucket traversal
+- object traversal 
+
+Deleting bucket using boto3:
+To finish off, you’ll use .delete() on your Bucket instance to remove the first bucket:
+```
+s3_resource.Bucket(first_bucket_name).delete()
+```
+If you want, you can use the client version to remove the second bucket:
+
+```
+s3_resource.meta.client.delete_bucket(Bucket=second_bucket_name)
+```
+
+Both the operations were successful because you emptied each bucket before attempting to delete it.
