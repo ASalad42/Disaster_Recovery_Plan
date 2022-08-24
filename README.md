@@ -45,8 +45,6 @@ sudo rm test.txt
 ```
 
 AWS S3 Acivity:
-- 10-15 lines of code max
-
 
 - sudo apt-get install python3.7
 - alias python=python3.7
@@ -55,7 +53,7 @@ AWS S3 Acivity:
 
 ![image](https://user-images.githubusercontent.com/104793540/186192657-de343c06-72dc-4a53-a743-b3eea098f520.png)
 
-- pip install boto3
+- pip3 install boto3
 
 ![image](https://user-images.githubusercontent.com/104793540/186192478-5ce4a26e-b365-4e13-8b37-3c1fdd95a839.png)
 
@@ -111,7 +109,6 @@ def create_bucket(bucket_prefix, s3_connection):
     return bucket_name, bucket_response
 ```
 
-![image](https://user-images.githubusercontent.com/104793540/186215017-4ab0bae3-b81a-42ea-a364-0dcaaf4f0690.png)
 
 ```python
 import boto3
