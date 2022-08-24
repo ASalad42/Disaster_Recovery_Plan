@@ -136,12 +136,18 @@ ModuleNotFoundError: No module named 'boto3'
 
 #### Still doing:
 
-Traversals
-If you need to retrieve information from or apply an operation to all your S3 resources, Boto3 gives you several ways to iteratively traverse your buckets and your objects.
-- bucket traversal
-- object traversal 
+Downloading using boto3:
+https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-download-file.html
+
+```python
+import boto3
+
+s3 = boto3.client('s3')
+s3.download_file('BUCKET_NAME', 'OBJECT_NAME', 'FILE_NAME')
+```
 
 Deleting bucket using boto3:
+https://realpython.com/python-boto3-aws-s3/
 To finish off, you’ll use .delete() on your Bucket instance to remove the first bucket:
 
 ```
