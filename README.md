@@ -132,7 +132,11 @@ s3.upload_file(
 debugging:
 
 ModuleNotFoundError: No module named 'boto3'
-- pip install pandas?
+- pip3 install boto3
+
+![image](https://user-images.githubusercontent.com/104793540/186383733-8620a83f-25f2-4a6e-81eb-006ad9ae17a7.png)
+
+- python3 aws_s3.py
 
 #### Still doing:
 
