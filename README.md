@@ -143,12 +143,22 @@ ModuleNotFoundError: No module named 'boto3'
 Downloading using boto3:
 https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-download-file.html
 
+sudo nano aws_s3_down.py
+
 ```python
 import boto3
 
 s3 = boto3.client('s3')
 s3.download_file('BUCKET_NAME', 'OBJECT_NAME', 'FILE_NAME')
+
+import boto3
+
+s3 = boto3.client('s3')
+s3.download_file('eng122-ayanle-boto3-bucket', 'pythonfile-test.txt', 'test.txt')
+
 ```
+python3 aws_s3_down.p
+
 
 Deleting bucket using boto3:
 https://realpython.com/python-boto3-aws-s3/
