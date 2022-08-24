@@ -4,10 +4,20 @@
 ![image](https://user-images.githubusercontent.com/104793540/186161098-123115d9-f9c0-42f9-b0cc-7b7b7fc4b69d.png)
 
 - what is s3
+
+Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance.
+
+Use Case: Customers of all sizes and industries can store and protect any amount of data for virtually any use case, such as:
+- data lakes
+- run cloud-native applications
+- Back up and restore critical data
+- mobile apps. 
+
+![image](https://user-images.githubusercontent.com/104793540/186368507-862f8a5f-f5aa-440f-b1bc-06ec8e1d586b.png)
+
 - disaster recovery plan 
+
 - how we set up access and keys
-
-
 ```
 Update
 Upgrade
@@ -131,4 +141,4 @@ If you want, you can use the client version to remove the second bucket:
 s3_resource.meta.client.delete_bucket(Bucket=second_bucket_name)
 ```
 
-Both the operations were successful because you emptied each bucket before attempting to delete it.
+You MUST empty buckets before attempting to delete it.
