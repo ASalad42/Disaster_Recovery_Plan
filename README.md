@@ -157,16 +157,22 @@ s3 = boto3.client('s3')
 s3.download_file('eng122-ayanle-boto3-bucket', 'pythonfile-test.txt', 'test.txt')
 
 ```
-python3 aws_s3_down.p
+python3 aws_s3_down.py
+
+deleting file from bucket:
 
 
 Deleting bucket using boto3:
 https://realpython.com/python-boto3-aws-s3/
 To finish off, you’ll use .delete() on your Bucket instance to remove the first bucket:
 
-```
-s3.Bucket(first_bucket_name).delete()
-```
+sudo nano aws_s3_del.py
 
+```python
+import boto3
+
+s3.Bucket(eng122-ayanle-boto3-bucket).delete()
+```
+python3 aws_s3_del.py
 
 You MUST empty buckets before attempting to delete it.
