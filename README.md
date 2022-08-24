@@ -92,24 +92,7 @@ s3 = boto3.resource('s3')
 ```
 
 
-Better way to get the region programatically is by taking advantage of a session object:
-- The nice part is that this code works no matter where you want to deploy it: locally/EC2/Lambda. Moreover, you don’t need to hardcode your region.
-
-```
-#creating a bucket with region  using session object
-def create_bucket(bucket_prefix, s3_connection):
-    session = boto3.session.Session()
-    current_region = session.region_name
-    bucket_name = create_bucket_name(bucket_prefix)
-    bucket_response = s3_connection.create_bucket(
-        Bucket=bucket_name,
-        CreateBucketConfiguration={
-        'LocationConstraint': current_region})
-    print(bucket_name, current_region)
-    return bucket_name, bucket_response
-```
-
-
+#### Making bucket and uploading file
 ```python
 import boto3
 s3 = boto3.client('s3')
@@ -135,9 +118,7 @@ ModuleNotFoundError: No module named 'boto3'
 
 - python3 aws_s3.py
 
-#### Still doing:
-
-Downloading using boto3:
+#### Downloading using boto3:
 https://boto3.amazonaws.com/v1/documentation/api/latest/guide/s3-example-download-file.html
 
 sudo nano aws_s3_down.py
@@ -156,10 +137,9 @@ s3.download_file('eng122-ayanle-boto3-bucket', 'pythonfile-test.txt', 'test.txt'
 ```
 python3 aws_s3_down.py
 
-deleting file from bucket:
+#### deleting file from bucket:
 
 -  sudo nano aws_s3_item.py
--  
 ```python
 import boto3
 
@@ -170,7 +150,7 @@ s3.Object('eng122-ayanle-boto3-bucket', 'pythonfile-test.txt').delete()
 ```
 - python3 aws_s3_item.py
 
-Deleting bucket using boto3:
+#### Deleting bucket using boto3:
 https://realpython.com/python-boto3-aws-s3/
 To finish off, you’ll use .delete() on your Bucket instance to remove the first bucket:
 
@@ -179,7 +159,9 @@ sudo nano aws_s3_del.py
 ```python
 import boto3
 
-s3.Bucket(eng122-ayanle-boto3-bucket).delete()
+s3 = boto3.client('s3')
+
+s3.delete_bucket(Bucket='eng122-ayanle-boto3-bucket')
 ```
 python3 aws_s3_del.py
 
