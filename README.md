@@ -1,9 +1,9 @@
 # Disaster Recovery Plan
 
 
-![image](https://user-images.githubusercontent.com/104793540/186161098-123115d9-f9c0-42f9-b0cc-7b7b7fc4b69d.png)
+![image](https://user-images.githubusercontent.com/104793540/186369739-2488f5a6-9b45-47d1-b69a-8f0560d06d1e.png)
 
-- what is s3
+### What is s3
 
 Amazon Simple Storage Service (Amazon S3) is an object storage service offering industry-leading scalability, data availability, security, and performance.
 
@@ -15,9 +15,17 @@ Use Case: Customers of all sizes and industries can store and protect any amount
 
 ![image](https://user-images.githubusercontent.com/104793540/186368507-862f8a5f-f5aa-440f-b1bc-06ec8e1d586b.png)
 
-- disaster recovery plan 
 
-- how we set up access and keys
+### Disaster Recovery Plan (how did u secure your app > highly available, durable scalable)
+•	In case of any unexpected disaster – AMI – backup -eu-west-1 Ireland 
+•	Multi AZs eu-west-1a,1b,1c
+•	Multi region Irelands as well as in London 
+•	What if AWS goes down???
+•	Multi cloud deployment AWS as well as Azure or CGP
+
+Hybrid cloud – localhost & public cloud 
+
+### How we set up access and keys
 ```
 Update
 Upgrade
@@ -124,6 +132,8 @@ s3.upload_file(
 debugging:
 ModuleNotFoundError: No module named 'boto3'
 - pip install pandas
+
+#### Still doing:
 
 Traversals
 If you need to retrieve information from or apply an operation to all your S3 resources, Boto3 gives you several ways to iteratively traverse your buckets and your objects.
