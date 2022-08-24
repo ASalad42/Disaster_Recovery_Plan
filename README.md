@@ -130,8 +130,9 @@ s3.upload_file(
 - Type python SCRIPTNAME.py in the terminal to execute the script
 
 debugging:
+
 ModuleNotFoundError: No module named 'boto3'
-- pip install pandas
+- pip install pandas?
 
 #### Still doing:
 
@@ -142,13 +143,10 @@ If you need to retrieve information from or apply an operation to all your S3 re
 
 Deleting bucket using boto3:
 To finish off, you’ll use .delete() on your Bucket instance to remove the first bucket:
-```
-s3_resource.Bucket(first_bucket_name).delete()
-```
-If you want, you can use the client version to remove the second bucket:
 
 ```
-s3_resource.meta.client.delete_bucket(Bucket=second_bucket_name)
+s3.Bucket(first_bucket_name).delete()
 ```
+
 
 You MUST empty buckets before attempting to delete it.
