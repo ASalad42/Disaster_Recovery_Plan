@@ -158,6 +158,17 @@ python3 aws_s3_down.py
 
 deleting file from bucket:
 
+-  sudo nano aws_s3_item.py
+-  
+```python
+import boto3
+
+s3 = boto3.resource('s3')
+#bucket and object name
+s3.Object('eng122-ayanle-boto3-bucket', 'pythonfile-test.txt').delete()
+
+```
+- python3 aws_s3_item.py
 
 Deleting bucket using boto3:
 https://realpython.com/python-boto3-aws-s3/
