@@ -17,11 +17,11 @@ Use Case: Customers of all sizes and industries can store and protect any amount
 
 
 ### Disaster Recovery Plan (how did u secure your app > highly available, durable scalable)
-•	In case of any unexpected disaster – AMI – backup -eu-west-1 Ireland 
-•	Multi AZs eu-west-1a,1b,1c
-•	Multi region Irelands as well as in London 
-•	What if AWS goes down???
-•	Multi cloud deployment AWS as well as Azure or CGP
+- In case of any unexpected disaster – AMI – backup -eu-west-1 Ireland 
+- Multi AZs eu-west-1a,1b,1c
+- Multi region Irelands as well as in London 
+- What if AWS goes down???
+- Multi cloud deployment AWS as well as Azure or CGP
 
 Hybrid cloud – localhost & public cloud 
 
