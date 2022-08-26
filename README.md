@@ -164,5 +164,4 @@ s3 = boto3.client('s3')
 s3.delete_bucket(Bucket='eng122-ayanle-boto3-bucket')
 ```
 python3 aws_s3_del.py
-
 You MUST empty buckets before attempting to delete it.
